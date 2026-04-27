@@ -1,0 +1,655 @@
+/****************NAV STARTS**************/
+.navbar {
+  font-family: "Chakra Petch", sans-serif;
+  padding-inline: 24px;
+  padding-block: 16px;
+  background-color: #0b0e13;
+  & .burger-btn {
+    transition: all 0.5s;
+    &:hover {
+      color: var(--main-color) !important;
+    }
+  }
+
+  & hr {
+    color: oklch(27.8% 0.033 256.848);
+  }
+
+  & .navbar-nav {
+    & .nav-item {
+      & a {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: white;
+        &:hover {
+          color: var(--main-color);
+        }
+      }
+    }
+  }
+  & form {
+    & .nav-icon {
+      & svg {
+        width: 20px;
+        margin-right: 1rem;
+        cursor: pointer;
+        fill: white;
+      }
+
+      &:hover {
+        & svg {
+          fill: var(--main-color);
+        }
+        & p {
+          color: var(--main-color) !important;
+          cursor: pointer;
+        }
+      }
+    }
+
+    & .sign-in {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+      padding: 8px 24px;
+    }
+  }
+}
+
+/****************NAV ENDS**************/
+
+/****************hero STARTS**************/
+.hero {
+  min-height: 100vh;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.851)), url("../assets/hero.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 120px 0 64px;
+  & .container {
+    height: fit-content !important;
+    & .content {
+      & .content-wrapper {
+        margin-bottom: 40px;
+        width: 47%;
+
+        & h1 {
+          color: rgb(241, 241, 241);
+          font-size: 60px;
+          line-height: 75px;
+          font-weight: 700;
+          margin-bottom: 24px;
+          & span {
+            color: var(--main-color);
+            display: block;
+          }
+        }
+        & p {
+          color: oklch(0.872 0.01 258.338);
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 26px;
+          font-family: sans-serif;
+          margin-bottom: 32px;
+        }
+      }
+      & .img-wrapper {
+        width: 45%;
+        object-fit: cover;
+        border: 5px solid var(--main-color);
+        & .img {
+          height: 392px;
+          overflow: hidden;
+        }
+        & .active-player {
+          padding: 24px;
+          border: 1px solid #364153;
+          background-color: #0b0e13;
+          bottom: -24px;
+          left: -24px;
+          z-index: 99;
+          & i {
+            color: var(--main-color);
+            font-size: 23px;
+          }
+          & p:nth-child(1) {
+            color: oklch(0.707 0.022 261.325);
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 16px;
+            font-family: sans-serif;
+          }
+          & p:nth-child(2) {
+            color: rgb(241, 241, 241);
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 28px;
+            font-family: sans-serif;
+          }
+        }
+      }
+    }
+  }
+}
+/****************hero ENDS**************/
+
+/****************ourGames STARTS**************/
+.ourGames {
+  background-color: var(--bg-color);
+  padding-block: 96px;
+  & .carousel-inner {
+    margin-bottom: 48px;
+    & .carousel-item {
+      overflow: hidden;
+      & .img-wrapper {
+        border-radius: 20px;
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+        & .overlay {
+          background-image: linear-gradient(
+            to top,
+            #cbfe1c,
+            transparent,
+            transparent
+          );
+          transform: translateY(100%);
+          transition: all 0.5s;
+          z-index: 30;
+          & p {
+            left: 20px;
+            bottom: 10px;
+            font-family: "Chakra Petch", sans-serif;
+            font-size: 18px;
+            line-height: 28px;
+            font-weight: 700;
+            color: rgb(11, 14, 19);
+          }
+        }
+        & .overlay-top {
+          left: 10px !important;
+          top: 10px !important;
+          transform: translateY(-100%);
+
+          transition: all 0.5s;
+          z-index: 40 !important;
+          & .overlay-content {
+            & div {
+              background-color: #28441b;
+              color: rgb(241, 241, 241);
+              font-family: "Chakra Petch", sans-serif;
+              font-size: 12px;
+              line-height: 16px;
+              font-weight: 700;
+              padding: 4px 12px;
+              & i {
+                margin-right: 8px;
+                color: var(--main-color);
+              }
+            }
+          }
+        }
+        & img {
+          transition: all 0.6s;
+        }
+        &:hover {
+          border: 3px solid var(--main-color);
+
+          & img {
+            transform: scale(1.2);
+          }
+          & .overlay {
+            transform: translateY(0%);
+          }
+          & .overlay-top {
+            transform: translateY(0%);
+          }
+        }
+      }
+    }
+  }
+
+  & .carousel-control-prev,
+  & .carousel-control-next {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: oklch(37.3% 0.034 259.733) !important;
+    border-width: 2px !important;
+    & i {
+      color: oklch(70.7% 0.022 261.325);
+      font-size: 25px;
+    }
+
+    &:hover {
+      border-color: var(--main-color) !important;
+      & i {
+        color: var(--main-color);
+      }
+    }
+  }
+}
+/****************ourGames ENDS**************/
+
+/****************whatWeDo STARTS**************/
+.whatWeDo {
+  background-color: var(--bg-color);
+  padding-top: 96px;
+  padding-bottom: 48px;
+  min-height: 100vh;
+  & .box {
+    width: 24%;
+    background-color: #1a1a1a;
+    padding: 24px;
+    border: 1px solid oklch(27.8% 0.033 256.848);
+    cursor: pointer;
+    transition: all 0.5s;
+    overflow: hidden;
+    & img {
+      object-fit: cover;
+    }
+    & .icon-wrapper {
+      background-color: oklch(27.8% 0.033 256.848);
+      width: fit-content;
+      padding: 17px;
+      transition: all 0.5s;
+
+      & i {
+        color: var(--main-color);
+        font-size: 22px;
+      }
+    }
+
+    & h3 {
+      margin-top: 16px;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 25px;
+      color: rgb(241, 241, 241);
+      font-family: "Days One", sans-serif;
+    }
+
+    & .triangle {
+      width: 20px;
+      height: 20px;
+      border: 20px solid transparent;
+      border-bottom-color: var(--main-color);
+    }
+
+    & .triangle-top {
+      transform: rotate(-45deg);
+      left: -100px;
+      top: -100px;
+      transition: all 0.5s;
+    }
+
+    & .triangle-bottom {
+      transform: rotate(135deg);
+      right: -100px;
+      bottom: -100px;
+      transition: all 0.5s;
+    }
+
+    &:hover {
+      border-color: var(--main-color);
+      & .icon-wrapper {
+        background-color: var(--main-color);
+        & i {
+          color: oklch(27.8% 0.033 256.848);
+        }
+      }
+
+      & .triangle-top {
+        left: -10px;
+        top: -10px;
+      }
+
+      & .triangle-bottom {
+        right: -10px;
+        bottom: -10px;
+      }
+    }
+  }
+
+  & .line {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      var(--main-color) 20%,
+      var(--main-color) 80%,
+      transparent
+    );
+    width: 80%;
+    max-width: 600px;
+    height: 2px;
+    box-shadow:
+      0 0 10px var(--main-color),
+      0 0 20px #cbfe1c4d;
+  }
+
+  & .marquee {
+    background-color: var(--bg-color);
+    height: 40vh;
+    padding-block: 80px;
+    background: radial-gradient(
+      ellipse,
+      rgba(203, 254, 28, 1),
+      var(--bg-color) 60%
+    );
+
+    & .img-wrapper {
+      width: 96px;
+      display: inline-block;
+      margin-right: 10px;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+  }
+}
+/****************whatWeDo ENDS**************/
+
+/****************ourTeam STARTS**************/
+.ourTeam {
+  background-color: var(--bg-color);
+  min-height: 100vh;
+  padding-block: 84px;
+  & .box {
+    overflow: hidden;
+    & .img-wrapper {
+      overflow: hidden;
+      padding: 0 !important;
+      text-align: left;
+
+      & .text-wrapper {
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+        & div:first-of-type {
+          & h3 {
+            font-family: "Days One", sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 28px;
+            color: white;
+            margin-bottom: 3.5px;
+          }
+          & p:first-of-type {
+            color: var(--main-color);
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 400;
+            margin-bottom: 0;
+            font-family: "Chakra Petch", sans-serif;
+          }
+          & p:nth-child(3) {
+            font-family: "Chakra Petch", sans-serif;
+
+            color: oklch(0.707 0.022 261.325);
+            font-size: 12px;
+            line-height: 16px;
+            font-weight: 400;
+            margin-bottom: 0;
+          }
+        }
+        & div:nth-child(2) {
+          & p {
+            writing-mode: vertical-rl;
+            color: var(--main-color);
+            font-size: 18px;
+            line-height: 28px;
+            font-weight: 700;
+            font-family: "Chakra Petch", sans-serif;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    & .overlay {
+      background-color: rgba(0, 0, 0, 0.2);
+      backdrop-filter: grayscale(100%);
+      transition: all 0.6s;
+    }
+    &:hover {
+      & .overlay {
+        transform: translateY(-100%);
+      }
+    }
+  }
+}
+/****************ourTeam ENDS**************/
+
+/****************contactUs STARTS**************/
+.contactUs {
+  background-color: #101625;
+  min-height: 100vh;
+  padding-block: 96px;
+  & .third-p {
+    margin-top: 24px;
+  }
+
+  & .content-wrapper {
+    & .details-wrapper {
+      & .our-location,
+      & .phone-number,
+      & .email-address {
+        background-color: #1e2939;
+        padding: 32px;
+        border-radius: 16px;
+        margin-bottom: 32px;
+
+        & .icon-wrapper {
+          background-color: var(--main-color);
+          width: 64px;
+          height: 64px;
+          margin-right: 24px;
+          & i {
+            font-size: 24px;
+          }
+        }
+        & .text-wrapper {
+          & h3 {
+            color: rgb(241, 241, 241);
+            font-size: 20px;
+            line-height: 28px;
+            font-weight: 700;
+          }
+          & p {
+            font-family: "Chakra Petch", sans-serif;
+            font-size: 16px;
+            color: oklch(0.707 0.022 261.325);
+            font-weight: 400;
+            line-height: 24px;
+          }
+        }
+      }
+
+      & .join-us {
+        padding: 32px;
+        border-radius: 16px;
+        background-image: linear-gradient(to right, var(--main-color), #16e072);
+        & h3 {
+          color: rgb(11, 14, 19);
+          font-size: 24px;
+          line-height: 32px;
+          font-weight: 700;
+          margin-bottom: 16px;
+        }
+        & p {
+          font-family: "Chakra Petch", sans-serif;
+
+          color: rgb(11, 14, 19);
+          font-weight: 400;
+          line-height: 24px;
+          margin-bottom: 24px;
+        }
+
+        & .social-media {
+          & .social-icon {
+            width: 48px;
+            height: 48px;
+            margin-right: 16px;
+            background-color: #0b0e13;
+            cursor: pointer;
+            &:hover {
+              background-color: #273b1f;
+            }
+
+            & i {
+              color: var(--main-color);
+              font-size: 22px;
+            }
+          }
+        }
+      }
+    }
+
+    & .form-wrapper {
+      padding: 32px;
+      border-radius: 16px;
+      background-color: #1e2939;
+
+      & h3 {
+        color: rgb(241, 241, 241);
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 700;
+        margin-bottom: 24px;
+      }
+
+      & * > div {
+        margin-bottom: 24px;
+        & label {
+          color: oklch(0.872 0.01 258.338);
+          font-size: 14px;
+          line-height: 20px;
+          font-weight: 700;
+          font-family: "Chakra Petch", sans-serif;
+          margin-bottom: 8px;
+        }
+
+        & input,
+        & textarea,
+        & select {
+          background-color: #364153;
+          padding: 12px;
+          outline: none;
+          border: none;
+          box-shadow: none;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          color: #838b95;
+          font-family: "Chakra Petch", sans-serif;
+          &:focus {
+            border: 1px solid var(--main-color);
+          }
+          &::placeholder {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            color: #838b95;
+            font-family: "Chakra Petch", sans-serif;
+          }
+        }
+
+        & select {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          color: rgb(241, 241, 241);
+          font-family: "Chakra Petch", sans-serif;
+        }
+
+        & textarea {
+          height: 146px;
+        }
+
+        & .form-check-label {
+          color: oklch(0.707 0.022 261.325);
+          line-height: 20px;
+          font-weight: 400;
+          font-size: 14px;
+        }
+      }
+
+      & .footer-form {
+        font-family: "Chakra Petch", sans-serif;
+
+        & h5 {
+          color: var(--main-color);
+          font-size: 24px;
+          line-height: 32px;
+          font-weight: 700;
+        }
+        & p {
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 20px;
+          color: oklch(0.707 0.022 261.325);
+          margin-bottom: 0 !important;
+        }
+      }
+    }
+  }
+}
+/****************contactUs ENDS**************/
+
+/****************footer STARTS**************/
+footer {
+  padding-block: 64px;
+  background-color: #000000;
+  & h4 {
+    color: rgb(241, 241, 241);
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+    margin-bottom: 24px;
+  }
+  & p {
+    line-height: 24px;
+    font-weight: 400;
+    color: oklch(0.707 0.022 261.325);
+    margin-bottom: 24px;
+    font-family: "Chakra Petch", sans-serif;
+  }
+  & li {
+    margin-bottom: 12px;
+  }
+
+  & .social-links {
+    & a {
+      margin-right: 16px;
+      & i {
+        font-size: 20px;
+        color: oklch(0.707 0.022 261.325);
+        &:hover {
+          color: var(--main-color);
+        }
+      }
+    }
+  }
+
+  & .policies {
+    & a {
+      margin-right: 24px;
+    }
+  }
+
+  & a {
+    color: oklch(0.707 0.022 261.325);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    font-family: "Chakra Petch", sans-serif;
+    &:hover {
+      color: var(--main-color);
+    }
+  }
+}
+/****************footer ENDS**************/

@@ -1,0 +1,185 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Days One", sans-serif;
+}
+body,
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 76px;
+}
+
+::selection {
+  background-color: var(--main-color);
+  color: black;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: var(--main-color);
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.main-color,
+.active {
+  color: var(--main-color) !important;
+}
+
+.main-btn,
+.seconds-btn {
+  background-color: var(--main-color);
+  color: black;
+  border-radius: 0.5rem;
+  padding-block: 0.5rem;
+  padding-inline: 1.5rem;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.3s;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: sans-serif;
+  padding: 16px 32px;
+  border: 3px solid var(--main-color);
+
+  &:hover {
+    background-color: #a7d022;
+
+    &::before {
+      left: 125%;
+      transition: 0.8s;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+      120deg,
+      transparent,
+      rgba(255, 255, 255, 0.7),
+      transparent
+    );
+    transform: skewX(-25deg);
+    transition: 0.8s;
+  }
+}
+
+.seconds-btn {
+  background-color: transparent;
+  color: var(--main-color);
+}
+
+.head {
+  margin-bottom: 64px;
+
+  & h2 {
+    font-family: "Days One", sans-serif;
+    color: white;
+    font-size: 48px;
+    line-height: 48px;
+    font-weight: 700;
+    margin-top: 14px;
+  }
+  & .first-p {
+    font-family: "Chakra Petch", sans-serif;
+    color: var(--main-color);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    position: relative;
+    display: inline;
+    &::before {
+      content: "";
+      position: absolute;
+      height: 3px;
+      width: 80px;
+      background-image: linear-gradient(to right, #0b0e13, #cbfe1c);
+      left: -100px;
+      top: 50%;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      height: 3px;
+      width: 80px;
+      background-image: linear-gradient(to left, #0b0e13, #cbfe1c);
+      right: -100px;
+      top: 50%;
+    }
+  }
+
+  & .second-p {
+    color: rgb(241, 241, 241);
+    font-size: 36px;
+    line-height: 40px;
+    font-weight: 700;
+    & span {
+      color: var(--main-color);
+    }
+  }
+
+  & .third-p {
+    font-family: "Chakra Petch", sans-serif;
+    color: oklch(0.707 0.022 261.325);
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 400;
+  }
+}
+
+.container,
+.container-lg {
+  max-width: 80% !important;
+}
+
+.box {
+  margin-bottom: 20px;
+}
+
+.hr {
+  background-color: #364153;
+  margin-block: 32px;
+  width: 100%;
+  height: 1px;
+}
+
+.logo {
+  & svg {
+    width: 30px;
+  }
+  & span {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+  }
+}

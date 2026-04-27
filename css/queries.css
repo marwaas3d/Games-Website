@@ -1,0 +1,176 @@
+@media (min-width: 992px) {
+  .contactUs {
+    & .content-wrapper {
+      gap: 5%;
+      & .details-wrapper,
+      & .form-wrapper {
+        width: 45% !important;
+      }
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .hero {
+    & .container {
+      & .content-wrapper,
+      & .img-wrapper {
+        width: 100% !important;
+      }
+
+      & .content-wrapper {
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+  .container-lg {
+    max-width: 80% !important;
+  }
+  .container {
+    max-width: 80% !important;
+  }
+
+  & .contactUs {
+    & .content-wrapper {
+      gap: 5%;
+      & .details-wrapper,
+      & .form-wrapper {
+        width: 47.5% !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+  }
+  .container-lg {
+    max-width: 95% !important;
+  }
+
+  .hero {
+    & .container {
+      & .content {
+        & .img-wrapper {
+          width: 80%;
+
+          & .img {
+            height: fit-content;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1022px) {
+  .hero {
+    & .container {
+      & .content {
+        & .content-wrapper {
+          & h1 {
+            font-size: 48px;
+            line-height: 60px;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+
+  .whatWeDo {
+    & .box {
+      width: 49%;
+      height: 448px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .btn {
+    width: 100%;
+    font-size: 12px;
+    padding-block: 10.5px;
+  }
+
+  .btn:first-of-type {
+    margin-bottom: 20px;
+  }
+  .hero {
+    & .container {
+      & .content {
+        & .content-wrapper {
+          & h1 {
+            font-size: 32px;
+            line-height: 39px;
+          }
+          & p {
+            font-size: 12px;
+            line-height: 20px;
+            font-weight: 400;
+          }
+        }
+        & .img-wrapper {
+          width: 100%;
+          & .active-player {
+            padding: 14px;
+
+            bottom: -14px;
+            left: -14px;
+            & i {
+              font-size: 23px;
+            }
+            & p:nth-child(1) {
+              font-size: 11px;
+              line-height: 14px;
+            }
+            & p:nth-child(2) {
+              font-size: 16px;
+              line-height: 25px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .container {
+    max-width: 90% !important;
+  }
+  .container-lg {
+    max-width: 90% !important;
+  }
+
+  .ourGames {
+    & .carousel-control-prev,
+    & .carousel-control-next {
+      width: 50px;
+      & i {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .head {
+    margin-bottom: 42px;
+
+    & h2 {
+      font-size: 26px;
+      line-height: 32px;
+      margin-bottom: 0px;
+    }
+
+    & .first-p {
+      font-size: 12px;
+      line-height: 18px;
+    }
+    & .second-p {
+      font-size: 26px;
+      line-height: 32px;
+    }
+    & .third-p {
+      font-size: 18px;
+      line-height: 25px;
+    }
+  }
+}
