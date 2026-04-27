@@ -14,7 +14,6 @@ Game Arena is a web-based platform that provides a collection of interactive min
 ## 🛠️ Tech Stack
 - HTML
 - CSS / SCSS
-- JavaScript
 - bootstrap
 
 ## 🚀 Run Locally
