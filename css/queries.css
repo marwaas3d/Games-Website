@@ -144,7 +144,8 @@
   .ourGames {
     & .carousel-control-prev,
     & .carousel-control-next {
-      width: 50px;
+      width: 45px;
+      height: 45px;
       & i {
         font-size: 20px;
       }
