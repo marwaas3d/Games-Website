@@ -333,22 +333,55 @@
   }
 
   & .marquee {
-    background-color: var(--bg-color);
+    overflow: hidden;
     height: 40vh;
-    padding-block: 80px;
+    padding-block: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
     background: radial-gradient(
       ellipse,
       rgba(203, 254, 28, 1),
       var(--bg-color) 60%
     );
+  }
 
-    & .img-wrapper {
-      width: 96px;
-      display: inline-block;
-      margin-right: 10px;
-      border-radius: 20px;
-      overflow: hidden;
-    }
+  .track {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .content {
+    display: flex;
+    width: max-content;
+    animation: scroll 20s linear infinite;
+  }
+
+  .reverse {
+    animation-direction: reverse;
+  }
+
+  .img-wrapper {
+    width: 96px;
+    margin-right: 10px;
+    border-radius: 20px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .img-wrapper img {
+    width: 100%;
+    display: block;
+  }
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
   }
 }
 /****************whatWeDo ENDS**************/

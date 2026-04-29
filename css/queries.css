@@ -192,4 +192,16 @@
       }
     }
   }
+
+  .contactUs {
+    & .content-wrapper {
+      & .form-wrapper {
+        & * > div {
+          & .form-check-label {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
 }
